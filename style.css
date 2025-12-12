@@ -1,0 +1,65 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base page */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* true black */
+  overflow: hidden;       /* no scrolling */
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;       /* bold */
+}
+
+/* Shared screen container */
+.screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* INTRO: full-bleed video */
+#intro-screen .intro-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* TRIPLE SCREEN: three side-by-side */
+#triple-screen {
+  gap: 1vw; /* spacing between videos */
+}
+
+#triple-screen .mw-video {
+  height: 80vh;      /* tweak if needed */
+  width: auto;
+  object-fit: cover;
+  background-color: #000;
+}
+
+/* Fade overlay */
+#fade-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  pointer-events: none;
+  opacity: 0;                 /* start invisible */
+  transition: opacity 0.25s;  /* fade duration */
+  z-index: 9999;
+}
+
+#triple-screen .mw-video { cursor: pointer; }
